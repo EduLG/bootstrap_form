@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Payment Form Example</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css" rel="stylesheet">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+	</head>
+
+	<body>
+
+		<div class="row justify-content-center mt-5">
+			<div class="col-8">
+				<div class="card">
+
+
+					<div class="card-header">
+						<h3 class="mb-0">Payment detail form</h3>
+					</div>
+
+
+					<div class="card-body">
+						<div id="error-msg" class="alert alert-danger">Cant send without filling all gaps</div>
+
+
+							<!--Form-->
+							<form  method="post" action="#">
+								<div class="row mt-4">
+
+									<!--CARD NUMBER-->
+										<div class="col-sm-5 pb-3">
+											<label for="exampleAccount">Card #</label> 
+											<input class="form-control" id="exampleAccount" placeholder="XXXX-XXXX-XXXX-XXXX-XXXX" type="text">
+										</div>
+
+									<!--CVC-->
+										<div class="col-sm-3 pb-3">
+											<label for="exampleCtrl">CVC #</label> 
+											<input class="form-control" id="exampleCtrl" placeholder="0000" type="text">
+										</div>
+
+									<!--AMOUNT-->
+										<div class="col-sm-4 pb-3">
+											<label for="exampleAmount">Amount</label>
+											<div class="input-group">
+												<div class="input-group-addon">
+													<i class="fas fa-dollar-sign"></i>
+												</div>
+												<input class="form-control" id="exampleAmount" placeholder="Amount" type="number">
+											</div>
+										</div>
+
+									<!--NAME-->
+										<div class="col-sm-6 pb-3">
+											<label for="exampleFirst">First Name</label> 
+											<input class="form-control" id="exampleFirst" type="text">
+										</div>
+
+									<!--LAST NAME-->
+										<div class="col-sm-6 pb-3">
+											<label for="exampleLast">Last Name</label> 
+											<input class="form-control" id="exampleLast" type="text">
+										</div>
+
+									<!--CITY-->
+										<div class="col-sm-6 pb-3">
+											<label for="exampleCity">City</label> <input class="form-control" id="exampleCity" type="text">
+										</div>
+
+									<!--PROVINCE-->
+										<div class="col-sm-3 pb-3">
+											<label for="exampleSt">Province</label>
+
+												<select class="form-control custom-select" id="exampleSt">
+													<option class="text-white bg-warning">Select a community</option>
+													<option value="AN">Andalucía</option>
+													<option value="AR">Aragón</option>
+													<option value="AS">Asturias</option>
+													<option value="IB">Islas Baleares</option>
+													<option value="CN">Canarias</option>
+													<option value="CB">Cantabria</option>
+													<option value="CM">Castilla-La Mancha</option>
+													<option value="CL">Castilla y León</option>
+													<option value="CT">Cataluña</option>
+													<option value="EX">Extremadura</option>
+													<option value="GA">Galicia</option>
+													<option value="MD">Madrid</option>
+													<option value="MC">Murcia</option>
+													<option value="NC">Navarra</option>
+													<option value="PV">País Vasco</option>
+													<option value="RI">La Rioja</option>
+													<option value="CS">Comunidad Valenciana</option>
+													<option value="CE">Ceuta</option>
+													<option value="ML">Melilla</option>
+												</select>
+										</div>
+
+									<!--POSTAL CODE-->
+										<div class="col-sm-3 pb-3">
+											<label for="exampleZip">Postal Code</label> 
+											<input class="form-control" id="exampleZip" type="text">
+										</div>
+
+									<!--PAYMENT METHOD-->
+										<div class="col-md-6 pb-3">
+											<p for="exampleAccount">We accept:</p>
+											<div class="btn-group" data-toggle="buttons">
+
+												<!--MASTERCARD-->
+													<label class="btn btn-secondary">
+														<input autocomplete="off" checked id="blue" name="options" type="radio">
+														<i class="fab fa-cc-mastercard"></i>
+													</label> 
+
+												<!--VISA-->
+													<label class="btn btn-secondary">
+														<input autocomplete="off" id="red" name="options" type="radio">
+														<i class="fab fa-cc-visa"></i>
+													</label> 
+
+												<!--DINERS CLUB-->
+													<label class="btn btn-secondary">
+														<input autocomplete="off" id="green" name="options" type="radio">
+														<i class="fab fa-cc-diners-club"></i>
+													</label> 
+
+												<!--AMERICAN EXPRESS-->
+													<label class="btn btn-secondary">
+														<input autocomplete="off" id="yellow" name="options" type="radio">
+														<i class="fab fa-cc-amex"></i>
+													</label> 
+
+											</div>
+
+
+										</div>
+
+
+									<!--MESSAGE-->
+										<div class="col-md-6 pb-3">
+											<label for="exampleMessage">Message</label> 
+											<textarea class="form-control" id="complexExampleMessage" rows="3"></textarea> 
+											<small class="text-muted">Add any notes here.</small>
+										</div>
+
+
+								</div>
+							</form>
+					</div>
+
+					<div class="card-footer">
+
+						<div class="float-right">
+
+							<!--BUTTONS-->
+								<button class="btn btn-secondary" type="reset">Cancel</button> 
+								<button id="sendForm" class="btn btn-primary" type="button" />Send</button>
+
+						</div>
+
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
